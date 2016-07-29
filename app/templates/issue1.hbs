@@ -6,8 +6,4 @@
 
 <hr />
 
-{{#unless show}}
-  <button onclick={{action (mut show) true}}>Show</button>
-{{else}}
-  {{#link-to 'index' classNameBindings="invalid"}}Click me to go to the index{{/link-to}}
-{{/unless}}
+{{#link-to 'index' classNameBindings="invalid"}}Click me to go to the index{{/link-to}}
