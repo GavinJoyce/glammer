@@ -6,4 +6,48 @@
 
 <hr />
 
-{{#link-to 'index' classNameBindings="invalid"}}Click me to go to the index{{/link-to}}
+<ul>
+  <li>
+    {{#link-to 'index' classNameBindings=":valid"}}
+      #link-to 'index' classNameBindings=":valid"
+    {{/link-to}}
+    <pre>class="valid  ember-view"</pre>
+  </li>
+  <li>
+    {{#link-to 'index' classNameBindings="invalid"}}
+      #link-to 'index' classNameBindings="invalid"
+    {{/link-to}}
+    <pre>class="  ember-view"</pre>
+  </li>
+  <li>
+    {{#amazing-link-to 'index'}}
+      #amazing-link-to 'index' classNameBindings="isUrgent"
+    {{/amazing-link-to}}
+    <pre>class="ember-view priority-class is-urgent-from-class from-amazing-link-to"</pre>
+  </li>
+  <li>
+    {{#amazing-link-to 'index' classNameBindings="isUrgentFromTemplate"}}
+      amazing-link-to 'index'
+    {{/amazing-link-to}}
+    <pre>class="  ember-view priority-class is-urgent-from-class from-amazing-link-to"</pre>
+  </li>
+  <li>
+    {{#amazing-link-to 'index' classNameBindings="isUrgentFromTemplate" priorityFromTemplateProperty="priority-from-template-property"}}
+      amazing-link-to 'index'
+    {{/amazing-link-to}}
+    <pre>class="  ember-view priority-class is-urgent-from-class from-amazing-link-to"</pre>
+  </li>
+  <li>
+    {{input value=dynamicProperty}}
+    {{#amazing-link-to 'index' classNameBindings="isUrgentFromTemplate" priorityFromTemplateProperty=dynamicProperty}}
+      amazing-link-to 'index'
+    {{/amazing-link-to}}
+    <pre>class="  ember-view priority-class is-urgent-from-class from-amazing-link-to"</pre>
+  </li>
+  <li>
+    {{#amazing-link-to 'index' classNameBindings="templateClassNameBinding" templateClassNameBinding=dynamicProperty}}
+      amazing-link-to 'index'
+    {{/amazing-link-to}}
+    <pre>class="  ember-view priority-class is-urgent-from-class from-amazing-link-to"</pre>
+  </li>
+</ul>
