@@ -1,0 +1,8 @@
+<h2>selectedPreset: {{selectedPreset}}</h2>
+
+
+<select onchange={{action (mut selectedPreset) value="target.value"}}>
+  {{#each presets as |preset|}}
+    <option value={{preset}} selected={{eq selectedPreset preset}}>{{preset}}</option>
+  {{/each}}
+</select>

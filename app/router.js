@@ -10,6 +10,8 @@ Router.map(function() {
   this.route('issue1');
   this.route('issue2');
   this.route('issue3');
+
+  this.route('select');
 });
 
 export default Router;
