@@ -9,3 +9,7 @@ To run in glimmer:
 To run in htmlbars:
 
 `bower install --save ember#canary` and run the app
+
+You can access the app at:
+
+http://localhost:4201/
