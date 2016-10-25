@@ -13,6 +13,10 @@ Router.map(function() {
   this.route('issue4');
 
   this.route('select');
+
+  this.route('parent', function() {
+    this.route('child');
+  });
 });
 
 export default Router;
