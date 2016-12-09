@@ -3,6 +3,10 @@ import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
 
+import A from './models/a';
+
+console.log(A);
+
 let App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
